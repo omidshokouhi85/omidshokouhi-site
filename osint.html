@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="امید شکوهی">
+<title>
+OSINT چیست؟ راهنمای جامع تحلیل اطلاعات منابع آشکار | امید شکوهی
+</title>
+<link rel="canonical" href="https://omidshokouhi.ir/osint.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OSINT چیست؟ راهنمای جامع تحلیل اطلاعات منابع آشکار">
+<meta property="og:description" content="آشنایی کامل با OSINT، روش‌های جمع‌آوری اطلاعات از منابع آشکار، ابزارها، متادیتا، SOCMINT و کاربردهای امنیت سایبری">
+<meta property="og:url" content="https://omidshokouhi.ir/osint.html">
+<meta property="og:image" content="https://omidshokouhi.ir/photo/osint.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OSINT چیست؟ راهنمای جامع تحلیل اطلاعات منابع آشکار">
+<meta name="twitter:description" content="آشنایی کامل با OSINT و کاربردهای آن در امنیت سایبری">
+<meta name="twitter:image" content="https://omidshokouhi.ir/photo/osint.png">
+<meta name="description" content="OSINT چیست؟ راهنمای جامع اطلاعات منابع آشکار، معرفی ابزارهای تحلیل اطلاعات، متادیتا، SOCMINT، امنیت سایبری، تحلیل داده‌های عمومی و کاربردهای حرفه‌ای در تحقیقات دیجیتال.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "OSINT چیست؟ راهنمای جامع تحلیل اطلاعات منابع آشکار",
+  "description": "آشنایی کامل با OSINT، ابزارها، متادیتا، SOCMINT و کاربردهای امنیت سایبری",
+  "image": "https://omidshokouhi.ir/photo/osint.png",
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "inLanguage": "fa-IR",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://omidshokouhi.ir/osint.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "امید شکوهی"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "امید شکوهی",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://omidshokouhi.ir/photo/logo.png"
+    }
+  }
+}
+</script>
+<!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="/css/osintstyle.css">
+
+        <!-- JavaScript Script -->
+    <script src="/js/osintscript.js" defer></script>
+</head>
+<body>
+
+    <!-- SECTION 1: HEADER & NAVIGATION -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-cta">
+                <a href="#contact" class="btn-outline">درخواست همکاری</a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/index.html" class="active">خانه</a></li>
+                    <li><a href="/index.html/#about">درباره من</a></li>
+                    <li><a href="/index.html/#certificates">گواهینامه</a></li>
+                    <li><a href="/index.html/#portfolio">نمونه کارها</a></li>
+                    <li><a href="/index.html/#blog">مقالات</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                    <img width="60" height="60" src="/photo/logo.png" alt="لوگوی امید شکوهی"> 
+
+            </div>
+        </div>
+    </header>
+
+
+
+ <main class="main-content">
+        <article class="article-container">
+            <div class="article-image-wrapper">
+                <img src="/photo/osint.png" width="1200" height="630" alt="OSINT چیست و تحلیل اطلاعات منابع آشکار" class="featured-image">
+            </div>
+            
+            <header class="article-header" dir="rtl">
+               
+            <h1 class="article-title"> OSINT چیست؟ راهنمای جامع تحلیل اطلاعات منابع آشکار </h1>
+            <p class="post-meta">تاریخ انتشار: ۱۴۰۵/۰۳/۲۷</p>
+                        </header>
+
+            <div class="article-body" dir="rtl">
+
+<h2>چکیده</h2>
+<p>
+اصطلاح اطلاعات حاصل از منابع آشکار یا اصطلاحاً OSINT (Open Source Intelligence) به فرآیند قانون‌ مند جمع‌آوری، ارزیابی، پردازش و تحلیل داده‌ های در دسترس عموم به منظور تولید اطلاعات هدایتگر و تصمیم‌ ساز اطلاق می‌شود. در عصر معاصر که با پدیده انفجار کلان‌ داده‌ها و توسعه زیرساخت‌ های دیجیتال شناخته می‌شود، OSINT از یک ابزار جانبی در جامعه اطلاعاتی به یک ستون حیاتی و استراتژیک در امنیت ملی، پدافند سایبری، تحقیقات جنایی و مدیریت ریسک سازمانی تبدیل شده است.
+</p>
+
+<h2 >۱. مقدمه</h2>
+
+<h3>۱.۱ تاریخچه و سیر تحول OSINT</h3>
+
+<p>
+ریشه‌های اصطلاح OSINT به جنگ جهانی دوم و تأسیس «سرویس نظارت بر پخش خارجی» (FBMS) در ایالات متحده (۱۹۴۱) باز می‌گردد که وظیفه آن رصد و تحلیل رادیوهای عمومی کشور های محور بود. این رویکرد سنتی که عمدتاً بر رسانه‌های مکتوب، رادیو، تلویزیون و مطبوعات چاپی تمرکز داشت، در دوران جنگ سرد توسعه یافت. با این حال، انقلاب دیجیتال در انتهای قرن بیستم و ظهور اینترنت، ماهیت این حوزه را به طور بنیادین دگرگون ساخت.
+</p>
+
+<h3>۱.۲ تحول جمع‌آوری اطلاعات و نقش فضای سایبر</h3>
+
+<p>
+با پیدایش وب ۲.۰ و شکل‌گیری شبکه‌ های اجتماعی، حجم داده‌ های تولید شده توسط کاربران و سازمان‌ ها به صورت نمایی افزایش یافت. اینترنت نه تنها دسترسی به اطلاعات را تسهیل کرد، بلکه مفاهیمی چون آرشیو های عمومی، پایگاه‌ های داده آنلاین، مخازن کد و داده‌ های مکانی را به منابعی بی‌ بدیل برای تحلیلگران اطلاعاتی تبدیل نمود.
+امروزه OSINT دیگر محدود به جمع‌آوری ایستا نیست؛ بلکه یک علم پویا مبتنی بر الگوریتم‌ های خزش، پردازش زبان طبیعی (NLP) و تحلیل شبکه است.
+</p>
+<h2>۲. مبانی نظری و متدولوژی OSINT</h2>
+
+<h3>۲.۱ تعریف رسمی و ابعاد ساختاری</h3>
+
+<p>
+بر اساس تعریف ارائه‌ شده در قانون مجوز دفاع ملی ایالات متحده، «OSINT اطلاعاتی است که از داده‌ های در دسترس عموم تولید می‌شود، به صورت به‌ موقع جمع‌آوری، بهره‌ برداری و منتشر می‌گردد و به منظور رفع یک نیاز اطلاعاتی خاص مورد استفاده قرار می‌گیرد.»
+</p>
+
+<p>
+تفاوت اساسی بین داده (Data)، اطلاعات (Information) و هوش/دانش (Intelligence) در این است که داده‌ ها مواد خام و فاقد ساختار هستند؛ اطلاعات به داده‌ های ساختار یافته و معنادار گفته می‌شود؛ اما Intelligence زمانی حاصل می‌شود که اطلاعات مورد ارزیابی، تحلیل متقاطع و تفسیر تخصصی قرار گیرند تا پاسخگوی یک سؤال استراتژیک یا تاکتیکی باشند.
+</p>
+
+<h3>۲.۲ چرخه اطلاعات (The Intelligence Cycle) در بستر OSINT</h3>
+
+<p>
+فرآیند استاندارد OSINT کاملاً منطبق بر چرخه کلاسیک اطلاعات است که از استاندارد های پنج‌مرحله‌ای مراجع اطلاعاتی پیرامون متدولوژی تحلیل پیروی می‌کند:</p>
+
+<p>
+<strong>۱. نیازمندی و هدایت (Requirements &amp; Direction):</strong>
+در این مرحله، اهداف تحقیق، شاخص‌ های کلیدی هوش (KPIs) و سؤالاتی که تحلیلگر باید به آن‌ ها پاسخ دهد مشخص می‌گردد. بدون هدایت دقیق، تحلیلگر در اقیانوس کلان‌ داده غرق خواهد شد.
+</p>
+
+<p>
+<strong>۲. جمع‌آوری (Collection):</strong>
+استخراج داده‌های خام از منابع مختلف آنلاین و آفلاین (مانند  دارک وب ، شبکه‌ های اجتماعی و وب‌سایت‌ ها) با استفاده از روش‌ های خودکار یا دستی.
+</p>
+
+<p>
+<strong>۳. پردازش و تبدیل (Processing &amp; Integration):</strong>
+تبدیل داده‌ های ناهمگون و بدون ساختار به فرمت‌ های استاندارد. این مرحله شامل مواردی چون ترجمه متون، استخراج متادیتا، یکپارچه‌ سازی پایگاه‌ های داده و پاک‌سازی داده‌ های تکراری است.
+</p>
+
+<p>
+<strong>۴. تحلیل و ترکیب (Analysis &amp; Production):</strong>
+حیاتی‌ ترین مرحله که در آن تحلیلگر با استفاده از تکنیک‌ های استدلال منطقی، تحلیل پیوند و ارزیابی اعتبار منابع، داده‌ های پردازش‌ شده را به بینش‌ های کاربردی و سناریو های محتمل تبدیل می‌کند.
+</p>
+
+<p>
+<strong>۵. انتشار (Dissemination):</strong>
+ارائه محصول نهایی (مانند گزارش متنی، نمودار روابط یا داشبورد هوشمند) به تصمیم‌ گیرندگان یا تیم‌ های عملیاتی در قالبی قابل فهم و امن.
+</p>
+<h2>۳. تاکسونومی منابع اطلاعاتی در OSINT</h2>
+
+<p>
+منابع اطلاعاتی آشکار را می‌توان بر اساس معماری شبکه و ماهیت محتوا به دسته‌ های مختلفی تقسیم‌بندی کرد. هر یک از این منابع در فرآیند جمع‌آوری اطلاعات و تحلیل امنیتی نقش متفاوتی ایفا می‌کنند و بسته به هدف تحقیق، ارزش اطلاعاتی خاص خود را دارند.
+</p>
+
+<h3>۳.۱ وب سطحی (Surface Web) و موتورهای جستجو</h3>
+
+<p>
+شامل تمام صفحاتی است که توسط خزندگان (Crawlers) موتورهای جستجوی عمومی مانند Google، Bing، DuckDuckGo و Yandex ایندکس می‌شوند. این بخش نقطه شروع تحقیقات برای شناسایی دامنه‌ها، نام‌ها، ایمیل‌ها و مستندات عمومی است.
+</p>
+
+<h3>۳.۲ شبکه‌های اجتماعی و پلتفرم‌های ارتباطی (SOCMINT)</h3>
+
+<p>
+پلتفرم‌هایی نظیر LinkedIn (برای شناسایی ساختار سازمانی و زنجیره تأمین انسانی)، X/Twitter (برای رصد اخبار لحظه‌ای و تحلیل افکار عمومی)، Telegram و Discord (برای مانیتورینگ گروه‌های هکری و فروم‌های زیرزمینی).
+</p>
+
+<h3>۳.۳ زیرساخت‌های فنی شبکه</h3>
+
+<p>
+<strong>داده‌های WHOIS:</strong>
+ثبت اطلاعات مالکیت دامنه، تاریخ ثبت، انقضا و اطلاعات تماس سرورها.
+</p>
+
+<p>
+<strong>رکوردهای سامانه نام دامنه (DNS Records):</strong>
+شامل رکوردهای A، AAAA، MX (سرورهای ایمیل)، TXT (شامل کدهای تأییدیه مانند SPF و DKIM) و NS.
+</p>
+
+<p>
+<strong>نقشه‌های وای‌فای و سلولی:</strong>
+پایگاه‌های داده‌ای مانند WiGLE که به تحلیلگر اجازه می‌دهند موقعیت جغرافیایی نقاط دسترسی بی‌سیم (BSSID) را ردیابی کند.
+</p>
+
+<h3>۳.۴ متادیتا (Metadata) و منابع چندرسانه‌ای</h3>
+
+<p>
+داده‌های نهفته درون فایل‌ها (مانند EXIF در تصاویر JPEG) که حاوی اطلاعات دقیقی چون مدل دوربین، نرم‌افزار ویرایش‌گر، تاریخ دقیق ثبت و از همه مهم‌تر مختصات جغرافیایی (GPS) هستند.
+</p>
+
+<h3>۳.۵ مخازن کد و پلتفرم‌های توسعه (Code Repositories)</h3>
+
+<p>
+پلتفرم‌هایی مانند GitHub، GitLab و Bitbucket. توسعه‌دهندگان گاهی به صورت سهوی کلیدهای دسترسی (API Keys)، کلمات عبور یا آدرس‌های IP سرورهای داخلی را در سورس‌کدهای عمومی جا می‌گذارند که نشت اطلاعاتی شدیدی محسوب می‌شود.
+</p>
+
+<h2>۴. نقش حیاتی OSINT در معماری امنیت سایبری</h2>
+
+<p>
+OSINT هسته اولیه فاز شناسایی (Reconnaissance) در هر دو جبهه دفاعی و هجومی امنیت سایبری است. فرآیندهای سایبری بدون این بازوی اطلاعاتی دچار اختلال عملیاتی می‌شوند.
+</p>
+
+<h3>۴.۱ عملیات تیم قرمز (Red Teaming) و تست نفوذ</h3>
+
+<p>
+پیش از ارسال حتی یک پکت (Packet) به سمت شبکه هدف، تیم قرمز با استفاده از تکنیک‌های Passive OSINT اقدام به جمع‌آوری اطلاعات می‌کند تا رفتاری کاملاً مخفیانه داشته باشد.
+</p>
+
+<p>
+این فرآیند شامل نگاشت ساختار شبکه، یافتن ایمیل‌های کارکنان جهت اجرای حملات هدفمند فیشینگ (Spear Phishing) و بررسی پلتفرم‌های ابری پیکربندی‌نشده (مانند دایرکتوری‌های باز AWS S3 Buckets) است.
+</p>
+
+<h3>۴.۲ عملیات تیم آبی (Blue Teaming) و مدیریت سطح حمله</h3>
+
+<p>
+تیم‌های دفاعی از OSINT برای دیدن سازمان خود از زاویه دید مهاجم استفاده می‌کنند.
+</p>
+
+<p>
+<strong>Attack Surface Management (ASM):</strong>
+شناسایی دارایی‌های دیجیتالی نادیده گرفته شده یا به اصطلاح "Shadow IT" (سرورهایی که توسط بخش‌های مختلف سازمان بدون هماهنگی با تیم امنیت راه‌اندازی شده‌اند).
+</p>
+
+<p>
+<strong>Threat Intelligence (TI):</strong>
+رصد مداوم فروم‌های وب تاریک و کانال‌های تلگرامی برای کشف نشت احتمالی دیتابیس‌ها یا اطلاعات هویتی (Credentials) سرقت‌شده کاربران سازمان در حملات Infostealerها.
+</p>
+
+<h2>۵. چالش‌ها، محدودیت‌ها و رویکردهای مقابله</h2>
+
+<p>
+رشد فزاینده حجم اطلاعات آشکار، چالش‌های ساختاری جدیدی را برای تحلیلگران ایجاد کرده است که سرعت و دقت فرآیندهای اطلاعاتی را تحت تأثیر قرار می‌دهند.
+</p>
+
+<h3>۵.۱ اطلاعات نادرست و عملیات فریب (Misinformation &amp; Counter-OSINT)</h3>
+
+<p>
+بزرگ‌ترین تهدید برای یک تحلیلگر OSINT، مواجهه با داده‌های ساختگی هدفمند یا عملیات فریب توسط رقیب است.
+</p>
+
+<p>
+مفهوم Data Poisoning در چرخه اطلاعات به این معناست که بازیگران تهدید عمداً اطلاعات، رکوردهای DNS یا کدهای گمراه‌کننده‌ای را در منابع آشکار منتشر می‌کنند تا مسیر تحلیل‌های امنیتی را منحرف سازند.
+</p>
+
+<h3>۵.۲ حجم عظیم داده‌ها (Information Overload)</h3>
+
+<p>
+تولید روزانه زتابایت‌ها داده در بستر اینترنت، منجر به پدیده «اشباع اطلاعاتی» می‌گردد.
+</p>
+
+<p>
+فرآیند تفکیک سیگنال (داده ارزشمند) از نویز (داده‌های بی‌ارزش و مکرر) بدون استفاده از الگوریتم‌های هوش مصنوعی عملاً بسیار دشوار و زمان‌بر خواهد بود.
+</p>
+
+<h2>۶. ملاحظات قانونی، حقوقی و اخلاقی</h2>
+
+<p>
+اعمال تکنیک‌های OSINT همواره بر مرز باریکی میان تحقیقات قانونی و نقض حقوق شهروندی حرکت می‌کند.
+</p>
+
+<h3>۶.۱ انطباق با مقررات حریم خصوصی و GDPR</h3>
+
+<p>
+بر اساس مقررات عمومی حفاظت از داده‌های اتحادیه اروپا (GDPR)، حتی اگر داده‌ای به صورت عمومی در اینترنت منتشر شده باشد (مانند پروفایل اینستاگرام یا لینکدین)، جمع‌آوری، ذخیره‌سازی و پردازش انبوه‌سازی‌شده آن بدون رضایت صریح مالک داده می‌تواند غیرقانونی تلقی شود.
+</p>
+
+<p>
+در حوزه تحقیقات شرکتی، تحلیلگران باید اصول مینی‌مالیزه‌سازی داده‌ها (Data Minimization) را رعایت کنند.
+</p>
+
+<h3>۶.۲ اخلاق در تحقیق و مسئولیت تحلیلگر</h3>
+
+<p>
+سوءاستفاده از ابزارهای OSINT می‌تواند منجر به پدیده‌های مخربی چون Doxing (انتشار عمومی اطلاعات خصوصی افراد با هدف آسیب رساندن یا ارعاب) شود.
+</p>
+
+<p>
+تحلیلگران موظفند استانداردهای زنجیره حفاظت از شواهد دیجیتال (Chain of Custody) را رعایت کرده و از تحلیل‌های سوگیرانه یا نقض حریم شخصی افراد غیرمرتبط با پرونده‌ها خودداری نمایند.
+</p>
+<h2>۷. آینده‌نگاری OSINT: نقش هوش مصنوعی و کلان‌داده</h2>
+
+<p>
+معماری OSINT در سال‌های پیش‌رو به طور کامل با فناوری‌های پردازش هوشمند گره خورده است.
+</p>
+
+<p>
+<strong>مدل‌های زبانی بزرگ (LLMs) و خودکارسازی:</strong>
+استفاده از مدل‌های هوش مصنوعی تخصصی برای تحلیل خودکار کدهای منبع، خلاصه‌سازی هزاران سند متنی به صورت همزمان و استخراج گراف‌های روابط بدون دخالت مستقیم عامل انسانی.
+</p>
+
+<p>
+<strong>پردازش پیشرفته تصاویر و Deepfake Detection:</strong>
+با گسترش تصاویر و ویدیوهای شبیه‌سازی شده با هوش مصنوعی (Deepfakes)، بازوی IMINT در OSINT به سمت ابزارهای احراز اصالت رسانه‌ای پیکسلی و تشخیص ناهنجاری‌های نوری دیجیتال حرکت کرده است.
+</p>
+
+<p>
+<strong>تحلیل زنده الگوهای رفتاری (Real-time Pattern Analysis):</strong>
+ترکیب داده‌های اینترنت اشیاء (IoT)، رادارهای هوانوردی عمومی (ADS-B) و موقعیت کشتی‌ها (AIS) برای پیش‌بینی بحران‌های ژئوپلیتیک یا ردیابی جابجایی‌های لجستیکی در سطح کلان جهانی.
+</p>
+
+<h2>۸. نتیجه‌گیری </h2>
+
+<p>
+اطلاعات حاصل از منابع آشکار (OSINT) امروزه فراتر از یک تکنیک ساده جستجو، یک دیسیپلین علمی، متدولوژیک و استراتژیک در مهندسی امنیت و تحقیقات دیجیتال است.
+</p>
+
+<p>
+بررسی زیرساخت‌ها، ابزارها و تکنیک‌های پیشرفته نشان می‌دهد که موفقیت در این حوزه نیازمند درک عمیق از معماری شبکه، تفکر انتقادی برای عبور از سدهای فریب اطلاعاتی و تسلط بر ابزارهای نوین اتوماسیون است.
+</p>
+
+<p>
+با پیشرفت فناوری‌های هوش مصنوعی و تحلیل کلان‌داده، پتانسیل‌های OSINT افزایش یافته است؛ اما همزمان، لزوم پایبندی به چارچوب‌های اخلاقی و قوانین بین‌المللی حریم خصوصی بیش از هر زمان دیگری احساس می‌شود.
+</p>
+
+<p>
+توسعه ساختارهای دفاعی سازمان‌ها بدون ادغام مؤثر فرآیندهای استاندارد OSINT در چرخه‌های امنیت سایبری امکان‌پذیر نخواهد بود.
+</p>
+
+<h2>۹. منابع </h2>
+
+<p>
+1. Bazzell, M. (2021). <em>Open Source Intelligence Techniques: Resources for Searching and Analyzing Online Information</em>. IntelTechniques Privacy Academy.
+</p>
+
+<p>
+2. Hassan, N. A., &amp; Hijazi, R. (2018). <em>Open Source Intelligence Methods and Tools: A Practical Guide to Online Intelligence</em>. Apress.
+</p>
+
+<p>
+3. Glassman, M., &amp; Kang, M. J. (2012). Intelligence in the internet age: The evolution and future of open source intelligence (OSINT). <em>Computers in Human Behavior</em>, 28(2), 673-682.
+</p>
+
+<p>
+4. Pastor-Galindo, J., et al. (2020). The evolution of OSINT: From traditional intelligence to cyberintelligence. <em>IEEE Access</em>, 8, 133230-133243.
+</p>
+
+<p>
+5. Europol. (2023). <em>Law Enforcement OSINT Guide</em>. European Cybercrime Centre (EC3).
+</p>
+
+<p>
+6. Nato Open Source Intelligence Handbook. (2002). <em>NATO Open Source Intelligence Intelligence Working Group</em>.
+</p>
+
+<p>
+7. Stallings, W. (2020). <em>Effective Cybersecurity: A Guide to Using Best Practices and Standards</em>. Addison-Wesley Professional.
+</p>
+
+<p>
+8. Kim, D., &amp; Solomon, M. G. (2021). <em>Fundamentals of Information Systems Security</em>. Jones &amp; Bartlett Learning.
+</p>
+
+<p>
+9. Mitre ATT&amp;CK Framework. (2025). <em>Technique T1593: Search Open Websites/Domains</em>. MITRE Corporation.
+</p>
+
+<p>
+10. ISO/IEC 27035-1:2016. <em>Information Technology — Security Techniques — Information Security Incident Management</em>. International Organization for Standardization.
+</p>
+
+<p>
+11. Regulation (EU) 2016/679 (GDPR). (2016). <em>General Data Protection Regulation</em>. Official Journal of the European Union.
+</p>
+
+<p>
+12. Trottier, D. (2015). Open source intelligence: An emerging surveillance paradigm. <em>Surveillance &amp; Society</em>, 13(3/4), 530-547.
+</p>
+
+<p>
+13. Olson, P. (2020). <em>We Are Anonymous: Inside the Hacker World of LulzSec, Anonymous, and the Global Cyber Insurgency</em>. Little, Brown.
+</p>
+
+<p>
+14. Scimeca, G., et al. (2022). Evaluating OSINT tools for target profiling in cyber reconnaissance. <em>Journal of Cyber Security Technology</em>, 6(3), 145-168.
+</p>
+
+<p>
+15. Gibson, S. (2014). Open Source Intelligence: An Examination of its Operational Utility. <em>RUSI Journal</em>, 159(4), 14-22.
+</p>
+
+<p>
+16. Zimmerman, C. (2024). <em>The Blue Team Handbook: Incident Response Edition</em>. Independent Publishing.
+</p>
+
+<p>
+17. O'Connor, T. (2023). Metadata analysis techniques in digital forensics and cyber investigation. <em>Journal of Digital Forensic Practice</em>, 11(2), 89-104.
+</p>
+
+<p>
+18. U.S. Department of Defense. (2020). <em>Joint Publication 2-0: Joint Intelligence</em>. Joint Chiefs of Staff.
+</p>
+
+<p>
+19. Bellingcat Investigation Team. (2021). <em>The Bellingcat Toolkit for Digital Investigations</em>. Bellingcat.
+</p>
+
+<p>
+20. Williams, H., &amp; Blum, I. (2018). Defining Second-Generation Open Source Intelligence (OSINT) for the Future Intelligence Enterprise. <em>RAND Corporation</em>.
+</p>
+
+<section class="author-box">
+<h2>درباره نویسنده</h2>
+<p>
+امید شکوهی، فعال حوزه OSINT   و شبکه‌های کامپیوتری.
+</p>
+</section>
+
+        </div>
+        </article>
+    </main>
+
+
+
+
+
+        <!-- SECTION 7: FOOTER & CONTACT INFO -->
+    <footer id="contact" class="main-footer">
+        <div class="footer-container">
+            <!-- Widget 1: Social Links -->
+            <div class="footer-widget social-widget">
+                <div class="social-icons">
+                    <a href="https://instagram.com/omidshokouhi85" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="https://t.me/omidshokouhi85" aria-label="Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+                   <a href="https://x.com/omidshokouhi85" aria-label="X (Twitter)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.64 7.584H.473l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zM17.605 20.64h2.039L6.486 3.246H4.298L17.605 20.64z"/></svg></a>                    
+</div>
+            </div>
+            <!-- Widget 4: Email -->
+            <div class="footer-widget text-widget">
+                <h3>ایمیل </h3>
+           <a href="mailto:omidshokouhi.85@gmail.com" target="_blank" dir="rtl">omidshokouhi.85@gmail.com</a>            </div>
+            <!-- Widget 3: Phone -->
+            <div class="footer-widget text-widget">
+                <h3>موبایل</h3>
+                <a href="tel:+989103749446" dir="rtl">09103749446</a>
+            </div>
+
+                        <!-- Widget 2: Address -->
+            <div class="footer-widget text-widget">
+                <h3>آدرس</h3>
+                <p>کرمان</p>
+            </div>
+        </div>
+        <div class="footer-bottom" dir="rtl">
+            <p>&copy; ۲۰۲۶ امید شکوهی. تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
