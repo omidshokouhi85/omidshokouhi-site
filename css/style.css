@@ -1147,3 +1147,20 @@ img {
         grid-template-columns: 1fr;
     }
 }
+@media (max-width:767px){
+
+.header-container{
+    padding:15px;
+    width:100%;
+    justify-content:space-between;
+}
+
+.main-nav{
+    flex:1;
+}
+
+.logo{
+    flex-shrink:0;
+}
+
+}
