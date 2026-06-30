@@ -1,9 +1,7 @@
 /* Design System & Variable Architecture 
    Inspired precisely by reference images.
 */
-.hero-subtitle{
-    display:none;
-}
+
 @font-face {
     font-family: 'Vazirmatn';
     src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
