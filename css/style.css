@@ -1164,3 +1164,58 @@ img {
 }
 
 }
+/*==============================
+Telegram Section
+==============================*/
+
+.telegram-section{
+
+    padding:110px 40px;
+    background:#fff;
+
+}
+
+.telegram-container{
+
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+
+}
+
+.telegram-label{
+
+    display:inline-block;
+    color:#777;
+    font-size:.9rem;
+    margin-bottom:18px;
+    letter-spacing:1px;
+
+}
+
+.telegram-container h2{
+
+    font-size:clamp(2rem,4vw,2.7rem);
+    color:#222;
+    margin-bottom:25px;
+    line-height:1.6;
+
+}
+
+.telegram-container p{
+
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    font-size:1.05rem;
+    line-height:2.1;
+    margin-bottom:40px;
+
+}
+
+.telegram-container .btn-solid{
+
+    padding:15px 40px;
+    font-size:1rem;
+
+}
